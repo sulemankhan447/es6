@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+	<script type="text/javascript">
+	function formValidation()
+	{
+/*		var email = document.getElementById("check").value;
+		var atpos = email.indexOf('@');
+		var dotpos = email.lastIndexOf('.');
+		if(atpos <1 || dotpos<atpos+2 || dotpos+2>=email.length)
+		{
+			alert("Not Valid Email Address");
+			return false;
+		}*/
+	var numbers = /^[0-9]+$/;
+	var mobile = document.getElementById("check").value;
+if(mobile.match(numbers))
+{
+	alert("Valid Email Address");
+}
+else
+{
+	alert("Inavlid Email");
+}
+	}
+	</script>
+</head>
+<body>
+	<form name="testform" id="testform" onsubmit="return formValidation()">
+		<input type="text" id="check" name="check" />
+		<input type="submit" />
+	</form>
+</body>
+</html>
